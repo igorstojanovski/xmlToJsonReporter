@@ -1,0 +1,68 @@
+<xsd:schema elementFormDefault="qualified" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="main" type="mainType" />
+    <xsd:complexType name="mainType">
+        <xsd:sequence>
+            <xsd:element name="report" type="xsd:string" />
+            <xsd:element name="reportinfo" type="reportinfoType" />
+            <xsd:element name="detaillist" type="detaillistType" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="detaillistType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="detail" type="detailType" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="detailType">
+        <xsd:sequence>
+            <xsd:element name="ip" type="xsd:string" />
+            <xsd:element name="hostname" type="xsd:string" />
+            <xsd:element name="platform" type="xsd:string" />
+            <xsd:element name="date" type="xsd:dateTime" />
+            <xsd:element name="virtualhost" type="xsd:string" />
+            <xsd:element name="id" type="xsd:int" />
+            <xsd:element name="name" type="xsd:string" />
+            <xsd:element name="portinfo" type="portinfoType" />
+            <xsd:element name="cvss_score" type="xsd:decimal" />
+            <xsd:element name="cvss_vector" type="xsd:string" />
+            <xsd:element name="cvss_vector_description" type="xsd:string" />
+            <xsd:element name="risk" type="xsd:int" />
+            <xsd:element name="family" type="xsd:string" />
+            <xsd:element name="product" type="xsd:string" />
+            <xsd:element name="description" type="xsd:string" />
+            <xsd:element name="information" type="xsd:string" />
+            <xsd:element name="falsepositive" type="xsd:int" />
+            <xsd:element name="solutiontitle" type="xsd:string" />
+            <xsd:element name="solution" type="xsd:string" />
+            <xsd:element name="category" type="xsd:string" />
+            <xsd:element name="referencelist" type="xsd:string" />
+            <xsd:element name="cve" type="xsd:string" />
+            <xsd:element name="bug" type="xsd:string" />
+            <xsd:element name="verify" type="xsd:string" />
+            <xsd:element name="history" type="historyType" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="historyType">
+        <xsd:sequence>
+            <xsd:element name="firstseen" type="xsd:dateTime" />
+            <xsd:element name="added" type="xsd:int" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="portinfoType">
+        <xsd:sequence>
+            <xsd:element name="portnumber" type="xsd:int" />
+            <xsd:element name="protocol" type="xsd:string" />
+            <xsd:element name="service" type="xsd:string" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="reportinfoType">
+        <xsd:sequence>
+            <xsd:element name="type" type="xsd:string" />
+            <xsd:element name="id" type="xsd:string" />
+            <xsd:element name="creator" type="xsd:string" />
+            <xsd:element name="selectedschedulejob" type="xsd:string" />
+            <xsd:element name="date" type="xsd:string" />
+            <xsd:element name="test" type="xsd:int" />
+            <xsd:element name="threat" type="xsd:int" />
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
