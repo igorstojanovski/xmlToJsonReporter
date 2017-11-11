@@ -1,5 +1,6 @@
 package org.programirame;
 
+import org.programirame.report.generators.JsonRiskSummaryReport;
 import org.programirame.report.generators.SimpleRiskSummaryReport;
 import org.programirame.report.generators.TextReporter;
 import org.programirame.utility.XmlDownloader;
@@ -17,8 +18,8 @@ public class Main {
         Optional<File> xmlFile = xmlDownloader.downloadUrl(args[0]);
 
         if(xmlFile.isPresent()) {
-            TextReporter reporter = new SimpleRiskSummaryReport();
-            reporter.getTextReport(xmlFile.get());
+            TextReporter reporter = new JsonRiskSummaryReport();
+            System.out.println(reporter.getTextReport(xmlFile.get()));
         }
     }
 
