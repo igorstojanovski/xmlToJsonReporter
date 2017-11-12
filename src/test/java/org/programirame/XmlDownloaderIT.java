@@ -85,10 +85,8 @@ public class XmlDownloaderIT {
                 "    },\n" +
                 "    {\n" +
                 "      \"level\": 4,\n" +
-                "      \"cve\": [\n" +
-                "        null\n" +
-                "      ],\n" +
-                "      \"total_cve\": 1\n" +
+                "      \"cve\": [],\n" +
+                "      \"total_cve\": 0\n" +
                 "    }\n" +
                 "  ]\n" +
                 "}");

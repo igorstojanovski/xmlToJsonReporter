@@ -117,7 +117,9 @@ public class JsonRiskSummaryReport implements TextReporter {
 
     private void addCveInfo(DetailType detailType) {
         Set<String> cves = riskLevelToCve.computeIfAbsent(detailType.getRisk(), k -> new HashSet<>());
-        cves.add(detailType.getCve().getId());
+        if(detailType.getCve().getId() != null) {
+            cves.add(detailType.getCve().getId());
+        }
     }
 
 }

@@ -37,10 +37,8 @@ public class JsonRiskSummaryReportTest {
                 "    }," +
                 "    {" +
                 "      \"level\": 4," +
-                "      \"cve\": [" +
-                "        null" +
-                "      ]," +
-                "      \"total_cve\": 1" +
+                "      \"cve\": []," +
+                "      \"total_cve\": 0" +
                 "    }" +
                 "  ]" +
                 "}");
