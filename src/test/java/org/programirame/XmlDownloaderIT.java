@@ -56,24 +56,22 @@ public class XmlDownloaderIT {
         assertThat(report).isEqualToIgnoringWhitespace("{\n" +
                 "  \"hosts\": 1,\n" +
                 "  \"ports\": 2,\n" +
-                "  \"hostInfo\": [\n" +
+                "  \"host_info\": [\n" +
                 "    {\n" +
                 "      \"name\": \"Dc2-windows2k3.internal.example.com\",\n" +
                 "      \"ports\": [\n" +
                 "        448,\n" +
                 "        445\n" +
-                "      ],\n" +
-                "      \"additionalProperties\": {}\n" +
+                "      ]\n" +
                 "    }\n" +
                 "  ],\n" +
-                "  \"riskInfo\": [\n" +
+                "  \"risk_info\": [\n" +
                 "    {\n" +
                 "      \"level\": 1,\n" +
                 "      \"cve\": [\n" +
                 "        \"CVE-2015-0A06\"\n" +
                 "      ],\n" +
-                "      \"totalCve\": 1,\n" +
-                "      \"additionalProperties\": {}\n" +
+                "      \"total_cve\": 1\n" +
                 "    },\n" +
                 "    {\n" +
                 "      \"level\": 2,\n" +
@@ -83,19 +81,16 @@ public class XmlDownloaderIT {
                 "        \"CVE-2015-1702\",\n" +
                 "        \"CVE-2015-0006\"\n" +
                 "      ],\n" +
-                "      \"totalCve\": 4,\n" +
-                "      \"additionalProperties\": {}\n" +
+                "      \"total_cve\": 4\n" +
                 "    },\n" +
                 "    {\n" +
                 "      \"level\": 4,\n" +
                 "      \"cve\": [\n" +
                 "        null\n" +
                 "      ],\n" +
-                "      \"totalCve\": 1,\n" +
-                "      \"additionalProperties\": {}\n" +
+                "      \"total_cve\": 1\n" +
                 "    }\n" +
-                "  ],\n" +
-                "  \"additionalProperties\": {}\n" +
+                "  ]\n" +
                 "}");
     }
 

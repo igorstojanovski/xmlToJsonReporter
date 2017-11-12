@@ -16,16 +16,15 @@ public class JsonRiskSummaryReportTest {
         assertThat(json).isEqualToIgnoringWhitespace("{" +
                 "  \"hosts\": 1," +
                 "  \"ports\": 1," +
-                "  \"hostInfo\": [" +
+                "  \"host_info\": [" +
                 "    {" +
                 "      \"name\": \"Dc2-windows2k3.internal.example.com\"," +
                 "      \"ports\": [" +
                 "        445" +
-                "      ]," +
-                "      \"additionalProperties\": {}" +
+                "      ]" +
                 "    }" +
                 "  ]," +
-                "  \"riskInfo\": [" +
+                "  \"risk_info\": [" +
                 "    {" +
                 "      \"level\": 2," +
                 "      \"cve\": [" +
@@ -34,19 +33,16 @@ public class JsonRiskSummaryReportTest {
                 "        \"CVE-2015-1702\"," +
                 "        \"CVE-2015-0006\"" +
                 "      ]," +
-                "      \"totalCve\": 4," +
-                "      \"additionalProperties\": {}" +
+                "      \"total_cve\": 4" +
                 "    }," +
                 "    {" +
                 "      \"level\": 4," +
                 "      \"cve\": [" +
                 "        null" +
                 "      ]," +
-                "      \"totalCve\": 1," +
-                "      \"additionalProperties\": {}" +
+                "      \"total_cve\": 1" +
                 "    }" +
-                "  ]," +
-                "  \"additionalProperties\": {}" +
+                "  ]" +
                 "}");
     }
 }

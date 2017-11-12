@@ -1,5 +1,7 @@
 package org.programirame.report.generators;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.programirame.report.ReportGenerationException;
 import org.programirame.report.model.json.HostInfo;
 import org.programirame.report.model.json.RiskInfo;
@@ -7,8 +9,6 @@ import org.programirame.report.model.json.RiskReport;
 import org.programirame.report.model.xml.DetailType;
 import org.programirame.report.model.xml.MainType;
 import org.programirame.report.services.XmlService;
-import wiremock.com.fasterxml.jackson.core.JsonProcessingException;
-import wiremock.com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.util.ArrayList;
