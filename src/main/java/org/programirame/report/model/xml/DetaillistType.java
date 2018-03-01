@@ -68,7 +68,7 @@ public class DetaillistType {
      */
     public List<DetailType> getDetail() {
         if (detail == null) {
-            detail = new ArrayList<DetailType>();
+            detail = new ArrayList<>();
         }
         return this.detail;
     }

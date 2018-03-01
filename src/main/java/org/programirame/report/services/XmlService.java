@@ -25,7 +25,7 @@ public class XmlService {
      *
      * @param dataSource file containg the data to transform
      */
-    public MainType getMainType(File dataSource) {
+    public MainType getMainType(File dataSource) throws ReportGenerationException {
         MainType unmarshal;
         try {
             JAXBContext jaxbContext = JAXBContext.newInstance(MainType.class);

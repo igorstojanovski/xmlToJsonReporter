@@ -15,7 +15,7 @@ public class XmlDownloaderTest {
 
         XmlDownloader xmlDownloader = new XmlDownloader();
         Optional<File> optionalXml = xmlDownloader.downloadUrl("https://outscan.outpost24.com/pub/report_test.xml");
-        assertThat(optionalXml.isPresent());
+        assertThat(optionalXml.isPresent()).isTrue();
 
         if(optionalXml.isPresent()) {
             File xml = optionalXml.get();

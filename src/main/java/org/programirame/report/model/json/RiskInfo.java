@@ -1,7 +1,6 @@
 package org.programirame.report.model.json;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -27,7 +26,7 @@ public class RiskInfo {
     @JsonProperty("total_cve")
     private Integer totalCve;
     @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, Object> additionalProperties = new HashMap<>();
 
     @JsonProperty("level")
     public Integer getLevel() {

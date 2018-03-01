@@ -1,5 +1,6 @@
 package org.programirame.report.generators;
 
+import org.programirame.report.ReportGenerationException;
 import org.programirame.report.model.xml.DetailType;
 import org.programirame.report.model.xml.MainType;
 import org.programirame.report.services.XmlService;
@@ -41,7 +42,7 @@ public class SimpleRiskSummaryReport implements TextReporter {
      * @return string based report
      */
     @Override
-    public String getTextReport(File dataSource) {
+    public String getTextReport(File dataSource) throws ReportGenerationException {
         MainType mainType  = XML_SERVICE.getMainType(dataSource);
 
         setReportInfo(mainType);

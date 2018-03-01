@@ -31,13 +31,14 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Main_QNAME = new QName("", "main");
+    private static final QName _Main_QNAME = new QName("", "main");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: generated
      * 
      */
     public ObjectFactory() {
+        // Empty constructor.
     }
 
     /**
@@ -98,7 +99,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "", name = "main")
     public JAXBElement<MainType> createMain(MainType value) {
-        return new JAXBElement<MainType>(_Main_QNAME, MainType.class, null, value);
+        return new JAXBElement<>(_Main_QNAME, MainType.class, null, value);
     }
 
 }

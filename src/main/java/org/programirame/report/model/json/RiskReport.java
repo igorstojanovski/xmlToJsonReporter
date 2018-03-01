@@ -28,7 +28,7 @@ public class RiskReport {
     @JsonProperty("risk_info")
     private List<RiskInfo> riskInfo = null;
     @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, Object> additionalProperties = new HashMap<>();
 
     @JsonProperty("hosts")
     public Integer getHosts() {

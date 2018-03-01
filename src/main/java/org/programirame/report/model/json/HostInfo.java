@@ -23,7 +23,7 @@ public class HostInfo {
     @JsonProperty("ports")
     private Set<Integer> ports = null;
     @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private Map<String, Object> additionalProperties = new HashMap<>();
 
     @JsonProperty("name")
     public String getName() {

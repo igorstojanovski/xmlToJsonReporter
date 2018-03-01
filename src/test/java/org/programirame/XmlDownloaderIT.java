@@ -3,6 +3,7 @@ package org.programirame;
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import org.junit.Rule;
 import org.junit.Test;
+import org.programirame.report.ReportGenerationException;
 import org.programirame.report.generators.JsonRiskSummaryReport;
 import org.programirame.report.generators.SimpleRiskSummaryReport;
 import org.programirame.report.generators.TextReporter;
@@ -30,7 +31,8 @@ public class XmlDownloaderIT {
     }
 
     @Test
-    public void shouldGenerateSimpleCorrectStringReport() throws IOException, JAXBException, XMLStreamException {
+    public void shouldGenerateSimpleCorrectStringReport()
+            throws IOException, JAXBException, XMLStreamException, ReportGenerationException {
 
         String report = getReport("simpleSample.xml", new SimpleRiskSummaryReport());
         assertThat(report).isEqualTo("Number of hosts: 1\n" +
@@ -49,7 +51,8 @@ public class XmlDownloaderIT {
     }
 
     @Test
-    public void shouldGenerateComplexCorrectJsonReport() throws IOException, JAXBException, XMLStreamException {
+    public void shouldGenerateComplexCorrectJsonReport()
+            throws IOException, JAXBException, XMLStreamException, ReportGenerationException {
 
         String report = getReport("complexSample.xml", new JsonRiskSummaryReport());
 
@@ -92,7 +95,7 @@ public class XmlDownloaderIT {
                 "}");
     }
 
-    private String getReport(String sampleReportLocation, TextReporter reporter) throws IOException, JAXBException, XMLStreamException {
+    private String getReport(String sampleReportLocation, TextReporter reporter) throws IOException, JAXBException, XMLStreamException, ReportGenerationException {
         stubFor(get(urlEqualTo("/my/resource"))
                 .willReturn(aResponse()
                         .withStatus(200)

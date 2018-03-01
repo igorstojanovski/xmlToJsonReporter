@@ -38,7 +38,7 @@ public class JsonRiskSummaryReport implements TextReporter {
      * @return string based report
      */
     @Override
-    public String getTextReport(File dataSource) {
+    public String getTextReport(File dataSource) throws ReportGenerationException {
         MainType mainType  = XML_SERVICE.getMainType(dataSource);
 
         setReportInfo(mainType);
@@ -48,7 +48,7 @@ public class JsonRiskSummaryReport implements TextReporter {
 
     }
 
-    private String getJsonStringFromObject(RiskReport riskReport) {
+    private String getJsonStringFromObject(RiskReport riskReport) throws ReportGenerationException {
         ObjectMapper objectMapper = new ObjectMapper();
 
         String s;

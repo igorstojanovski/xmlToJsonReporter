@@ -2,6 +2,7 @@ package org.programirame.report.services;
 
 import org.assertj.core.api.SoftAssertions;
 import org.junit.Test;
+import org.programirame.report.ReportGenerationException;
 import org.programirame.report.model.xml.DetailType;
 import org.programirame.report.model.xml.MainType;
 import org.programirame.utilities.FileUtils;
@@ -13,7 +14,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class XmlServiceTest {
 
     @Test
-    public void shouldReturnTheCorrectMainTypeModel() {
+    public void shouldReturnTheCorrectMainTypeModel() throws ReportGenerationException {
         XmlService xmlService = new XmlService();
         MainType mainType = xmlService.getMainType(FileUtils.getFile(getClass(), "simpleSample.xml"));
 
