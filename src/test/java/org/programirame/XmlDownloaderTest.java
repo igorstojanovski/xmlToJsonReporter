@@ -1,7 +1,7 @@
 package org.programirame;
 
 import org.junit.Test;
-import org.programirame.utility.XmlDownloader;
+import org.igorski.utility.XmlDownloader;
 
 import java.io.File;
 import java.util.Optional;

@@ -1,10 +1,11 @@
 package org.programirame.report.services;
 
 import org.assertj.core.api.SoftAssertions;
+import org.igorski.report.services.XmlService;
 import org.junit.Test;
-import org.programirame.report.ReportGenerationException;
-import org.programirame.report.model.xml.DetailType;
-import org.programirame.report.model.xml.MainType;
+import org.igorski.report.ReportGenerationException;
+import org.igorski.report.model.xml.DetailType;
+import org.igorski.report.model.xml.MainType;
 import org.programirame.utilities.FileUtils;
 
 import java.util.List;

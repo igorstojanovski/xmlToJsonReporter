@@ -1,5 +1,6 @@
 package org.programirame.report.generators;
 
+import org.igorski.report.generators.SimpleRiskSummaryReport;
 import org.junit.Test;
 import org.programirame.utilities.FileUtils;
 

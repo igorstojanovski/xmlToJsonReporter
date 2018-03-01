@@ -71,7 +71,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.programirame.Main</mainClass>
+                            <mainClass>org.igorski.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

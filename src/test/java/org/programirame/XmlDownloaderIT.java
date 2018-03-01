@@ -3,11 +3,11 @@ package org.programirame;
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import org.junit.Rule;
 import org.junit.Test;
-import org.programirame.report.ReportGenerationException;
-import org.programirame.report.generators.JsonRiskSummaryReport;
-import org.programirame.report.generators.SimpleRiskSummaryReport;
-import org.programirame.report.generators.TextReporter;
-import org.programirame.utility.XmlDownloader;
+import org.igorski.report.ReportGenerationException;
+import org.igorski.report.generators.JsonRiskSummaryReport;
+import org.igorski.report.generators.SimpleRiskSummaryReport;
+import org.igorski.report.generators.TextReporter;
+import org.igorski.utility.XmlDownloader;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.stream.XMLStreamException;
